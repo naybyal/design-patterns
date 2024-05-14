@@ -1,0 +1,25 @@
+
+The Strategy Pattern is a behavioral design pattern that allows you to define a family of algorithms, encapsulate each one as a separate class, and make them interchangeable at runtime. 
+It enables the client to choose the algorithm that suits their needs without tightly coupling the client code to the specific implementation.
+
+To implement the Strategy Pattern, you typically create an interface or an abstract class that defines the common behavior for all the strategies. 
+Each concrete strategy class implements this interface or extends the abstract class and provides its own implementation of the algorithm.
+
+The client code then interacts with the strategies through the common interface or abstract class, without needing to know the specific implementation details. 
+This allows for flexibility and easy extensibility, as new strategies can be added without modifying the existing code.
+
+The Strategy Pattern is useful in situations where you have multiple algorithms or variations of a behavior and want to dynamically select and switch between them based on different conditions or requirements.
+
+
+
+---Key Concepts---
+
+Context:    This is the class that uses a Strategy. 
+            The context is configured with a concrete strategy object and maintains a reference to a Strategy object. 
+            It can change the strategy during runtime.
+
+Strategy Interface: This interface is common to all concrete strategies. 
+                    The context uses this interface to call the algorithm defined by a ConcreteStrategy.
+
+Concrete Strategies:    These are classes that implement the Strategy interface. 
+                        Each concrete strategy implements the algorithm using a different method.
